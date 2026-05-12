@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://8vxh1ruhgbcd"]
+
+[ext_resource type="PackedScene" uid="uid://ck8ovwp4hnvq1" path="res://Scenes/player_1_padel.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://wlr5bi5d1nan" path="res://Scenes/player_2_padel.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://da4qap71vh31i" path="res://Scenes/ball_sprite.tscn" id="3_8gbba"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7u77a"]
+
+[node name="Main" type="Node2D" unique_id=1566663483]
+
+[node name="Divider" type="Sprite2D" parent="." unique_id=1135403473]
+position = Vector2(576, 324)
+scale = Vector2(40, 648)
+texture = SubResource("CanvasTexture_7u77a")
+
+[node name="Player1Padel" parent="." unique_id=1611281067 instance=ExtResource("1_jjgbg")]
+position = Vector2(30, 324)
+
+[node name="Player2Padel" parent="." unique_id=295457881 instance=ExtResource("2_bo1nx")]
+position = Vector2(1122, 324)
+
+[node name="BallSprite" parent="." unique_id=129559348 instance=ExtResource("3_8gbba")]
+position = Vector2(576, 324)
+
+[node name="ScoreUI" type="Control" parent="." unique_id=202626562]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player1Score" type="Label" parent="ScoreUI" unique_id=1094217523]
+layout_mode = 0
+offset_left = 516.0
+offset_right = 556.0
+offset_bottom = 23.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

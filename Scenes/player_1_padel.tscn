@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ck8ovwp4hnvq1"]
+
+[ext_resource type="Script" uid="uid://co3nvwmotljxp" path="res://Scripts/player_1_padel.gd" id="1_sn70l"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2vb0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vb0i"]
+
+[node name="Player1Padel" type="CharacterBody2D" unique_id=1611281067]
+script = ExtResource("1_sn70l")
+
+[node name="Player1Sprite" type="Sprite2D" parent="." unique_id=924415834]
+scale = Vector2(30, 180)
+texture = SubResource("CanvasTexture_2vb0i")
+
+[node name="Player1Collision" type="CollisionShape2D" parent="." unique_id=418366424]
+scale = Vector2(1.5, 9)
+shape = SubResource("RectangleShape2D_2vb0i")
